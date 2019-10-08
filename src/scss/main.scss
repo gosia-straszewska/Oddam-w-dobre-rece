@@ -1,8 +1,14 @@
+@import './normalize.css';
+@import './settings/fonts';
+@import './settings/colors';
+
 body {
+    font-family: $font-base;
     background-color: gray;
 }
 
 .navigation {
+
     background-color: grey;
     height: 200px;
 }
