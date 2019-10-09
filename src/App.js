@@ -1,12 +1,17 @@
 import React from 'react';
-import './scss/main.scss'
-import LandingPage from './components/LandingPage'
+import './scss/main.scss';
+import LandingPage from './components/LandingPage';
+import {HashRouter, Route, Switch} from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      <LandingPage />
-    </div>
+    <HashRouter>
+      <>
+        <Switch>
+          <Route exact path='/' component={LandingPage} />
+        </Switch>
+      </>
+    </HashRouter>
   );
 }
 
