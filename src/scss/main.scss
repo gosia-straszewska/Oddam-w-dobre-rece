@@ -131,14 +131,51 @@ body {
     cursor: pointer;   
 }
 
-
-
-
-
+//STATISTICS
 .statistics{
-    background-color: grey;
-    height: 200px;
+    background: $color-stats;
 }
+.statistics .container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stats-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 40px;
+}
+
+.stats-info-numb {
+    font-family:$color-font-stats;
+    font-size: 45px;
+    font-weight: 200;
+    margin: 0 auto;
+}
+
+.stats-info-title{
+    font-family: $color-font-stats;
+    font-size: 15px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.stats-info-txt {
+    font-family: $color-font-stats;
+    font-size: 13px;
+    font-weight: 200;
+}
+
+
+
+
+
+
+
+
 .steps {
     background-color: rgb(100, 92, 92);;
     height: 200px;
