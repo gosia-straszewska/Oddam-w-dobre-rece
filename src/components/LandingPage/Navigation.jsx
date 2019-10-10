@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-scroll';
+import {Link as LinkRouter} from 'react-router-dom'
 
 const options ={
     activeClass: "active",
@@ -14,8 +15,8 @@ class Login extends Component{
         return (
             <div className="login">
                 <ul className="login-nav">
-                    <li className="login-el">Zaloguj</li>
-                    <li className="login-el">Załóż konto</li>
+                <LinkRouter to='logowanie'><li className="login-el">Zaloguj</li></LinkRouter>
+                <LinkRouter to='rejestracja'><li className="login-el">Załóż konto</li></LinkRouter>
                 </ul>
             </div>
         )

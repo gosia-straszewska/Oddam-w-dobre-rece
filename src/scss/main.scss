@@ -2,6 +2,8 @@
 @import './settings/fonts';
 @import './settings/colors';
 
+
+
 @mixin nav-basic{
     position: relative;
     display: flex;
@@ -19,9 +21,8 @@ body {
     font-family: $font-base;
 }
 
-.navigation {
-    background-color: $color-background;
-}
+// NAWIGACJA
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -30,8 +31,12 @@ body {
 .login-nav,
 .menu-nav {
     @include nav-basic();
+    
 }
 
+.login-nav a{
+    text-decoration: none; 
+}
 
 .login-el{
     position: relative;
@@ -45,6 +50,7 @@ body {
     margin-top: 10px;
     padding: 10px;
     opacity: 1;
+    cursor: pointer;   
     &:hover{
         border: solid 1px $color-stats;
     }
@@ -62,18 +68,73 @@ body {
     opacity: 1;
     margin: 9px 0 9px 10px;
     padding: 9px 10px;
+    cursor: pointer;
     &:hover{
         border: solid 1px $color-font-main;
     }
 }
 
-
-
+//WELCOME
 
 .welcome {
-    background-color: rgb(100, 92, 92);
-    height: 200px;
+    background: url('../assets/Home-Hero-Image.jpg');
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: -300px;
 }
+.welcome .container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-background {
+    width: 50%;
+    height: 530px;
+}
+
+.welcome-cta{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-cta-title {
+    font-family: $font-base;
+    font-size: 28px;
+    font-weight: 300;
+    color: $color-font-main;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.welcome-cta img{
+    height: 23px;
+    widows: 243px;
+    display: block;
+    margin-bottom: 50px;
+}
+.welcome-cta-btns{
+    display: flex;
+    justify-content: space-between;
+}
+.welcome-cta-btn{
+    height: 70px;
+    width: 260px;
+    text-transform: uppercase;
+    font-family: $font-base;
+    font-size: 25px;
+    font-weight: 100;
+    color: $color-font-main;
+    border: 1px solid $color-font-main;
+    cursor: pointer;   
+}
+
+
+
+
+
 .statistics{
     background-color: grey;
     height: 200px;
