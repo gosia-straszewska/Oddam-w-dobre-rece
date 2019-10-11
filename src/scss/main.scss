@@ -260,9 +260,59 @@ body {
 
 //ABOUT
 .about{
-    background-color: grey;
-    height: 200px;
+    background-color: $color-background;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.about-info {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img {
+    width: 50%;
+    background-image: url('../assets/People.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    height: 550px;
+}
+
+.about-info-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-info-sign {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+}
+
+.about-info-title {
+    font-family: $font-base;
+    font-size: 30px;
+    color: $color-font-main;
+}
+
+.about-info-txt {
+    font-family: $font-base;
+    font-size: 20px;
+    color: $color-font-main;
+    text-align: center;
+    letter-spacing: -0.6px;
+    line-height: 2.0;
+}
+
+
 
 
 .slider{

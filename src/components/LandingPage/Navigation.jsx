@@ -15,8 +15,8 @@ class Login extends Component{
         return (
             <div className="login">
                 <ul className="login-nav">
-                <LinkRouter to='logowanie'><li className="login-el">Zaloguj</li></LinkRouter>
-                <LinkRouter to='rejestracja'><li className="login-el">Załóż konto</li></LinkRouter>
+                <LinkRouter to='/logowanie'><li className="login-el">Zaloguj</li></LinkRouter>
+                <LinkRouter to='/rejestracja'><li className="login-el">Załóż konto</li></LinkRouter>
                 </ul>
             </div>
         )
