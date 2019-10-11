@@ -316,13 +316,21 @@ body {
 
 
 .slider{
-      background-color: rgb(100, 92, 92);
+    background-color: rgb(100, 92, 92);
     height: 200px;
 }
+
+//CONTACT
 .contact{
-    background-color: grey;
-    height: 200px;
+    height: 700px;
+    background-image: url('../assets/Background-Contact-Form.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.3;
 }
+
+
 .footer{
     background-color: rgb(100, 92, 92);;
     height: 200px;
