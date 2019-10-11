@@ -13,6 +13,16 @@
     margin: 0;
 }
 
+@mixin btn{
+    text-transform: uppercase;
+    font-family: $font-base;
+    font-size: 25px;
+    font-weight: 100;
+    color: $color-font-main;
+    border: 1px solid $color-font-main;
+    cursor: pointer; 
+}
+
 * {
     box-sizing: border-box;
 }
@@ -122,13 +132,7 @@ body {
 .welcome-cta-btn{
     height: 70px;
     width: 260px;
-    text-transform: uppercase;
-    font-family: $font-base;
-    font-size: 25px;
-    font-weight: 100;
-    color: $color-font-main;
-    border: 1px solid $color-font-main;
-    cursor: pointer;   
+    @include btn();   
 }
 
 //STATISTICS
@@ -170,22 +174,99 @@ body {
 }
 
 //STEPS
-// .steps {
-   
-// }
+.steps {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.steps-roadmap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.steps-title {
+    font-family: $font-base;
+    font-size: 30px;
+    color: $color-font-main;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.steps-title img{
+    height: 23px;
+    widows: 243px;
+    display: block;
+    margin-bottom: 30px;
+}
 
+.steps-roadmap {
+    background: $color-background;
+    width: 100%;
+}
 
+.steps-roadmap-step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 50px;;
+}
 
+.steps-roadmap-step-line {
+    width: 60px;
+    height: 1px;
+    background: $color-font-main;
+}
 
+.steps-roadmap .container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.steps-roadmap-step img{
+    margin-top: 20px;
+}
+
+.steps-roadmap-step-title {
+    font-family: $font-base;
+    font-size: 16px;
+    color: $color-font-main;
+}
+
+.steps-roadmap-step-txt {
+    font-family: $font-base;
+    font-size: 13px;
+    color: $color-font-main;
+    text-align: center;
+}
+
+.steps-cta-btn {
+    @include btn();
+    height: 70px;
+    width: 260px;
+    margin: 35px 0 60px 0;
+}
+
+//ABOUT
 .about{
     background-color: grey;
     height: 200px;
 }
+
+
 .slider{
-    background-color: rgb(100, 92, 92);
+      background-color: rgb(100, 92, 92);
     height: 200px;
 }
 .contact{
