@@ -312,13 +312,10 @@ body {
     line-height: 2.0;
 }
 
+//SLIDER
 
 
 
-.slider{
-    background-color: rgb(100, 92, 92);
-    height: 200px;
-}
 
 //CONTACT
 .contact {
@@ -326,10 +323,6 @@ body {
     height: 670px;
     display: block;
     position: relative;
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
-    // flex-direction: column;
     &:after {
         content: "";
         background: url('../assets/Background-Contact-Form.jpg');
