@@ -38,7 +38,7 @@ export class Contact extends Component {
                     </div>
                     <div className="footer">
                         <div className="container">
-                            <small class="page-footer-copyright">
+                            <small className="page-footer-copyright">
                                 &copy; Copyright by Coders Lab
                             </small>
                             <nav className="page-footer-nav">

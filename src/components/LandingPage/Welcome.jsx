@@ -11,11 +11,9 @@ export class Welcome extends Component {
                     </div>
                     <div className="welcome-cta">
                         <p className="welcome-cta-title">
-                            <p>
                                 Zacznij pomagać!
                                 <br></br>
                                 Oddaj niechciane rzeczy w zaufane ręce
-                            </p>
                         </p>
                         <img src={decoration} alt="" />
                         <div className="welcome-cta-btns">

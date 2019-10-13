@@ -12,14 +12,24 @@ export class Slider extends Component {
                 </div>
                 <div className="slider-nav">
                     <button className="slider-nav-btn">Fundacjom</button>
-                    <button className="slider-nav-btn">Organizacjom pozarządowym</button>
-                    <button className="slider-nav-btn">Lokalnym zbiórkom</button>
+                    <button className="slider-nav-btn">Organizacjom<br></br>pozarządowym</button>
+                    <button className="slider-nav-btn">Lokalnym<br></br>zbiórkom</button>
                 </div>
                 <div className="slider-info">
                     <p>W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z<br></br>którymi współpracujemy. Możesz sprawdzić czym się zajmują,<br></br>komu pomagają i czego potrzebują.</p>
                 </div>
                 <div className="slider-list">
-                    lista
+                    <ul>
+                        <li className="list-el">
+                            <div className="list-el-about">
+                                <p className="list-el-title">Fundacja "Dbam o Zdrowie"</p>
+                                <p className="list-el-goal">Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>
+                            </div>
+                            <div className="list-el-things">
+                                <p>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
             </div>

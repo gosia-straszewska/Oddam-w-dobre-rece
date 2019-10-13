@@ -313,6 +313,106 @@ body {
 }
 
 //SLIDER
+.slider .container {
+    width: 1000px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-title p {
+    font-family: $font-base;
+    font-size: 27px;
+    color: $color-font-main;
+    margin-bottom: 15px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.slider-title img {
+    height: 20px;
+    width: 280px;
+    display: block;
+    margin-bottom: 35px;
+}
+
+.slider-nav {
+    display: flex;
+    justify-content: center;
+
+}
+
+.slider-nav-btn {
+    width: 150px;
+    height: 50px;
+    font-family: $font-base;
+    font-size: 16px;
+    font-weight: 100;
+    color: $color-font-main;
+    border: 1px solid $color-font-main;
+    cursor: pointer;
+    // padding: 12px 31px;
+    margin: 15px 10px;
+}
+
+.slider-info {
+    font-family: $font-base;
+    font-size: 16px;
+    font-weight: 100;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.slider-list {
+    width: 100%;
+}
+
+.list-el {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-alt;
+    margin:15px 0;
+    border-bottom: 1px solid $color-font-main;
+}
+
+.list-el-about {
+    width: 50%;
+    height: 100%;
+    text-align: left;
+}
+
+.list-el-title {
+    font-weight: 200;
+    font-size: 18px;
+    margin: 30px 0 10px 0;
+}
+
+.list-el-goal {
+    font-weight: 200;
+    font-size: 13px;
+    margin: 10px 0 30px 0;
+
+}
+
+.list-el-things {
+    width: 50%;
+    height: 100%;
+    text-align: right;
+}
+
+.list-el-things p {
+    font-weight: 200;
+    font-size: 13px;
+}
+
+
+
+
 
 
 
