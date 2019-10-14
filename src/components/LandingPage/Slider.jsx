@@ -1,10 +1,61 @@
 import React, { Component } from 'react';
 import decoration from '../../assets/Decoration.svg';
 
-export class Slider extends Component {
+class List extends Component {
+    constructor(props) {
+                super(props);
+                this.state = {
+                    items: [],
+                    isLoaded: false,
+                }
+    };
+
+    componentDidMount(){
+
+        fetch("http://localhost:3000/fundations")
+                .then(res => res.json())
+                .then(json => {
+                    this.setState ({
+                        isLoaded: true,
+                        items: json
+                    })
+                }); 
+            }
+    
     render() {
-        return (
-            <div className="slider" id="organizations">
+
+        var {isLoaded, items} = this.state;
+
+        if(!isLoaded){
+            return <div>Wczytywanie...</div>
+        } else {
+
+            return (
+
+            <div>
+                {items.map(item => (
+                    <li className="list-el" key={item.id}>
+                        <div className="list-el-about">
+                            <p className="list-el-title">{item.name}</p>
+                            <p className="list-el-goal">{item.goal}</p>
+                        </div>
+                        <div className="list-el-things">
+                            <p>{item.things}</p>
+                        </div>
+                    </li>
+                ))}
+            </div>
+            
+            )
+        }
+    }
+}
+
+export class Slider extends Component {
+
+render() {
+    return (
+        <div className="slider" id="organizations">
             <div className="container">
                 <div className="slider-title">
                     <p>Komu pomagamy?</p>
@@ -19,20 +70,12 @@ export class Slider extends Component {
                     <p>W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z<br></br>którymi współpracujemy. Możesz sprawdzić czym się zajmują,<br></br>komu pomagają i czego potrzebują.</p>
                 </div>
                 <div className="slider-list">
-                    <ul>
-                        <li className="list-el">
-                            <div className="list-el-about">
-                                <p className="list-el-title">Fundacja "Dbam o Zdrowie"</p>
-                                <p className="list-el-goal">Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>
-                            </div>
-                            <div className="list-el-things">
-                                <p>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
-                            </div>
-                        </li>
+                    <ul className="slider-list-elements" ref="list">
+                        <List/>
                     </ul>
                 </div>
             </div>
-            </div>
-        )
-    }
+        </div>
+    )
+}
 }

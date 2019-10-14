@@ -1,0 +1,113 @@
+{
+	"fundations": [{
+			"id": 1,
+			"name": "Dbam o zdrowie",
+			"goal": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej",
+			"things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+		},
+		{
+			"id": 2,
+			"name": "Dla dzieci",
+			"goal": "Pomoc dzieciom z ubogich rodzin.",
+			"things": "ubrania, meble, zabawki"
+		},
+		{
+			"id": 3,
+			"name": "Bez domu",
+			"goal": "Pomoc dla osób nie posiadających miejsca zamieszkania.",
+			"things": "ubrania, jedzenie, ciepłe koce"
+		},
+		{
+			"id": 4,
+			"name": "Azylu pod Psim Aniłem",
+			"goal": "Pomoc bezdomnym i porzuconym zwierzętom.",
+			"things": "karma dla zwierząt, ciepłe koce"
+		},
+		{
+			"id": 5,
+			"name": "Maiukot",
+			"goal": "Pomoc porzuconym kotom",
+			"things": "karma dla zwierząt, ciepłe koce"
+		},
+		{
+			"id": 6,
+			"name": "Przyjaciele Braci Mniejszych",
+			"goal": "Pomoc porzuconym zwierzętom",
+			"things": "karma dla zwierząt, ciepłe koce"
+		},
+		{
+			"id": 7,
+			"name": "Samotna Mama",
+			"goal": "Pomoc niepełnym rodzinom, przykrzywdzonym przez los",
+			"things": "ubrania, jedzenie, ksiązki, meble, sprzęt AGD/RTV"
+		},
+		{
+			"id": 8,
+			"name": "Samotna Mama",
+			"goal": "Pomoc niepełnym rodzinom, przykrzywdzonym przez los",
+			"things": "ubrania, jedzenie, ksiązki, meble, sprzęt AGD/RTV"
+		},
+		{
+			"id": 9,
+			"name": "Lorem ipsum 9",
+			"goal": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+			"things": "Egestas, sed, tempus"
+		}
+	],
+	"organizations": [{
+			"id": 1,
+			"name": "Lorem Ipsum 1",
+			"goal": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+			"things": "Egestas, sed, tempus"
+		},
+		{
+			"id": 2,
+			"name": "Lorem Ipsum 2",
+			"goal": "Scelerisque in dictum non consectetur a erat nam.",
+			"things": "Mi, quis, hendrerit, dolor"
+		},
+		{
+			"id": 3,
+			"name": "Lorem Ipsum 3",
+			"goal": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+			"things": "Mi, quis, hendrerit, dolor"
+		},
+		{
+			"id": 4,
+			"name": "Lorem Ipsum 4",
+			"goal": "Scelerisque in dictum non consectetur a erat nam.",
+			"things": "Ut, aliquam, purus, sit, amet"
+		},
+		{
+			"id": 5,
+			"name": "Lorem Ipsum 5",
+			"goal": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+			"things": "Ut, aliquam, purus, sit, amet"
+		},
+		{
+			"id": 6,
+			"name": "Lorem Ipsum 6",
+			"goal": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+			"things": "Egestas, sed, tempus"
+		}
+	],
+	"local": [{
+			"id": 1,
+			"name": "Lorem Ipsum 1",
+			"goal": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+			"things": "Egestas, sed, tempus"
+		},
+		{
+			"id": 2,
+			"name": "Lorem Ipsum 2",
+			"goal": "Scelerisque in dictum non consectetur a erat nam.",
+			"things": "Mi, quis, hendrerit, dolor"
+		},
+		{
+			"id": 3,
+			"name": "Lorem Ipsum 3",
+			"goal": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+			"things": "Mi, quis, hendrerit, dolor"
+		}
+	]
+}
