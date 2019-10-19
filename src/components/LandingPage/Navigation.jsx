@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-scroll';
-import {Link as LinkRouter} from 'react-router-dom'
+import {Link as LinkRouter} from 'react-router-dom';
 
 const options ={
     activeClass: "active",

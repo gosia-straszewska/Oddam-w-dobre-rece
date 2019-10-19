@@ -1,0 +1,157 @@
+
+
+.log-in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.log-in .container {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.log-in-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.log-in-header p {
+    font-family: $font-base;
+    font-size: 30px;
+    font-weight: 300;
+    margin: 40px 0 20px 0;
+}
+
+.log-in-header img {
+    width: 180px;
+    margin-bottom: 40px;
+}
+
+.log-in-form {
+    width: 100%;
+}
+.log-in-form-details{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $color-background;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.log-in-form-mail{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 15px;
+}
+
+.log-in-form-mail label{
+    font-family: $font-base;
+    color: $color-font-main;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.log-in-form-mail input {
+    background: transparent;
+    border:0 none;
+    border-bottom: 1px solid $color-font-main;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.log-in-form-password{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 15px;
+}
+
+.log-in-form-password label{
+    font-family: $font-base;
+    color: $color-font-main;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.log-in-form-password input {
+    background: transparent;
+    border:0 none;
+    border-bottom: 1px solid $color-font-main;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.log-in-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.log-in-form-btn-register input,
+.log-in-form-btn-login input {
+    text-align: center;
+    font-family: $font-base;
+    font-size: 15px;
+    padding: 6px 0px;
+    font-weight: 100;
+    color: #3C3C3C;
+    border: 1px solid #FFF;
+    cursor: pointer;
+    background: transparent;
+    margin-top: 15px;
+    width:100px;
+    &:hover{
+        border: solid 0.5px $color-font-main;
+    }
+}
+
+//LOG OUT
+
+.log-out .container{
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.log-out-header p{
+    font-family: $font-base;
+    font-weight: 300;
+    font-size: 25px;
+    margin: 50px 0 15px 0;
+}
+
+.log-out-header img{
+    width: 180px;
+}
+
+.log-out-home-btn input{
+    text-align: center;
+    font-family: $font-base;
+    font-size: 15px;
+    padding: 6px 0px;
+    font-weight: 100;
+    color: #3C3C3C;
+    border: 1px solid $color-font-main;
+    cursor: pointer;
+    background: transparent;
+    margin-top: 35px;
+    padding: 10px 5px;  
+    width:150px;
+}

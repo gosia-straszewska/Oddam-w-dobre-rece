@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import decoration from '../../assets/Decoration.svg';
+// import ReactPaginate from 'react-paginate';
 
 class List extends Component {
     constructor(props) {
@@ -7,20 +8,21 @@ class List extends Component {
                 this.state = {
                     items: [],
                     isLoaded: false,
+
                 }
     };
 
     componentDidMount(){
-
+        
         fetch("http://localhost:3000/fundations")
                 .then(res => res.json())
                 .then(json => {
                     this.setState ({
                         isLoaded: true,
-                        items: json
+                        items: json,
                     })
                 }); 
-            }
+            };
     
     render() {
 
@@ -45,7 +47,7 @@ class List extends Component {
                     </li>
                 ))}
             </div>
-            
+
             )
         }
     }
@@ -72,6 +74,7 @@ render() {
                 <div className="slider-list">
                     <ul className="slider-list-elements" ref="list">
                         <List/>
+                        
                     </ul>
                 </div>
             </div>
