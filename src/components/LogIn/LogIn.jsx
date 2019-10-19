@@ -6,37 +6,38 @@ import {Link as LinkRouter} from 'react-router-dom';
 
 
 export class LogIn extends Component {
-    state = {
-        mail: '',
-        password: '',
-        mailError: '',
-        passwordError: '',
-    }
-    
-
-    handleChange = e => {
-        const value = e.target.value;
-        const name = e.target.name;
-        this.setState({
-          [name]: value
-        });
-    };
-
-    handleSubmit = e => {
-        e.preventDefault();
-        console.log(`mail=${this.state.mail} pass= ${this.state.password}`);
-
-        if(!this.state.mail.includes('@')){
-            this.setState({
-                mailError: 'Podany email jest nieprawidłowy',
-            })
-        } if(this.state.password.length <= 5 ){
-            this.setState({
-                passwordError: 'Podane hasło jest za krótkie!',
-            })
-        } return console.log(this.state)
+        state = {
+            mail: '',
+            password: '',
+            mailError: '',
+            passwordError: '',
+        }
         
+    
+        handleChange = e => {
+            const value = e.target.value;
+            const name = e.target.name;
+            this.setState({
+              [name]: value
+            });
         };
+    
+        handleSubmit = e => {
+            e.preventDefault();
+            console.log(`mail=${this.state.mail} pass= ${this.state.password}`);
+            console.log(this.state);
+    
+            if(!this.state.mail.includes('@')){
+                this.setState({
+                    mailError: 'Podany email jest nieprawidłowy',
+                })
+            } if(this.state.password.length <= 5 ){
+                this.setState({
+                    passwordError: 'Podane hasło jest za krótkie!',
+                })
+            } else return console.log("zarejestrowano")
+            
+            };
 
     render() {
         const { mail, password, mailError, passwordError} = this.state;
