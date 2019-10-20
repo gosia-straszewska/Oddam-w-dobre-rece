@@ -3,15 +3,15 @@ import { Navigation } from '../LandingPage/Navigation';
 import decoration from '../../assets/Decoration.svg';
 import {Link as LinkRouter} from 'react-router-dom';
 
-
-
-export class LogIn extends Component {
-        state = {
+const initialState = {
             mail: '',
             password: '',
             mailError: '',
             passwordError: '',
-        }
+}
+
+export class LogIn extends Component {
+        state = initialState;
         
     
         handleChange = e => {
