@@ -6,8 +6,8 @@ import instagram from '../../assets/Instagram.svg';
 const initialState = {
     name: '',
     nameError: '',
-    mail: '',
-    mailError: '',
+    email: '',
+    emailError: '',
     message: '',
     messageError: '',
     sendMessage: '',
@@ -30,9 +30,9 @@ export class Contact extends Component {
                 nameError: 'Podane imię jest nieprawidłowe'
             });
             return false
-        } if (!/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(this.state.mail)){
+        } if (!/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(this.state.email)){
             this.setState ({
-                mailError: 'Podany email jest nieprawidłowy'
+                emailError: 'Podany email jest nieprawidłowy'
             });
             return false
         } if (this.state.message.length < 120 ){
@@ -51,6 +51,23 @@ export class Contact extends Component {
         const isValid = this.validate();
         if (isValid) {
             console.log(this.state, "wysłano")
+
+            let {name, email, message} = this.state;
+            let data = { name, email, message};
+            let urlAPI = 'https://fer-api.coderslab.pl/v1/portfolio/contact';
+            console.log(data)
+
+            fetch( urlAPI , { 
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers:{
+                    "Content-Type": "application/json"
+                  }
+            }).then((res) => res.json())
+            .then((data) => console.log(data))
+            .catch((err)=>console.log(err))
+    
+
             //clear the form
             this.setState(
                 initialState,
@@ -62,7 +79,7 @@ export class Contact extends Component {
     };
 
     render() {
-        const {name, nameError, mail, mailError, message, messageError, sendMessage} = this.state;
+        const {name, nameError, email, emailError, message, messageError, sendMessage} = this.state;
         return (
             <div>
                 <div id="contact" className="contact">
@@ -82,8 +99,8 @@ export class Contact extends Component {
                                         </div>
                                         <div className="contact-form-mail">
                                             <label htmlFor="">Wpisz swój email</label>
-                                            <input type="text" value={mail} name="mail" onChange={this.handleChange} />
-                                            <div className="contact-input-error">{mailError}</div>
+                                            <input type="text" value={email} name="email" onChange={this.handleChange} />
+                                            <div className="contact-input-error">{emailError}</div>
                                         </div>
                                     </div>
                                     <div className="contact-form-msg">
