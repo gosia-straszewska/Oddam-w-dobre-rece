@@ -9,7 +9,8 @@ const initialState = {
     mail: '',
     mailError: '',
     message: '',
-    messageError: ''
+    messageError: '',
+    sendMessage: '',
 }
 export class Contact extends Component {
     state = initialState;
@@ -23,6 +24,7 @@ export class Contact extends Component {
     };
 
      validate = () => {
+        
         if(this.state.name === ''){
             this.setState({
                 nameError: 'Podane imię jest nieprawidłowe'
@@ -39,8 +41,9 @@ export class Contact extends Component {
             });
             return false
         } 
-        return true
-     }
+           return true;
+        }
+     
 
     handleSubmit = e => {
         e.preventDefault();
@@ -50,13 +53,16 @@ export class Contact extends Component {
             console.log(this.state, "wysłano")
             //clear the form
             this.setState(
-                initialState
+                initialState,
             );
+            this.setState({
+                sendMessage: (<p>Wiadomość została wysłana!<br></br>Wkrótce się skontaktujemy.</p>)
+            })
         } else console.log("nie wysłano")
     };
 
     render() {
-        const {name, nameError, mail, mailError, message, messageError} = this.state;
+        const {name, nameError, mail, mailError, message, messageError, sendMessage} = this.state;
         return (
             <div>
                 <div id="contact" className="contact">
@@ -65,6 +71,7 @@ export class Contact extends Component {
                         <div className="contact-container">
                             <p className="contact-title"> Skontaktuj się z nami</p>
                             <img src={decoration} alt="" />
+                            <div className="contact-send-success">{sendMessage}</div>
                             <div className="contact-form">
                                 <form action="" onSubmit={this.handleSubmit}>
                                     <div className="contact-form-details">
