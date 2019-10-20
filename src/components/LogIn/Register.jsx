@@ -3,17 +3,18 @@ import { Navigation } from '../LandingPage/Navigation';
 import decoration from '../../assets/Decoration.svg';
 import {Link as LinkRouter} from 'react-router-dom';
 
+const initialState = {
+    mail: '',
+    password: '',
+    secondPassword: '',
+    mailError: '',
+    passwordError: '',
+    secondPasswordError: '',
+}
 
 
 export class Register extends Component {
-    state = {
-        mail: '',
-        password: '',
-        secondPassword:'',
-        mailError: '',
-        passwordError:'',
-        secondPasswordError: '',
-    }
+    state = initialState;
     
 
     handleChange = e => {
@@ -24,27 +25,39 @@ export class Register extends Component {
         });
     };
 
-    handleSubmit = e => {
-        e.preventDefault();
-        console.log(`mail=${this.state.mail} pass= ${this.state.password}`);
-        console.log(this.state);
-
+    validate = () => {
         if(!this.state.mail.includes('@')){
             this.setState({
                 mailError: 'Podany email jest nieprawidłowy',
-            })
+            }); 
+            return false
         } if(this.state.password.length <= 5 ){
             this.setState({
                 passwordError: 'Podane hasło jest za krótkie!',
-            })
+            });
+            return false
         } if (this.state.password !== this.state.secondPassword){
             this.setState({
                 secondPasswordError: 'Hasła muszą być takie same!',
-            })
-        } else return console.log("zarejestrowano")
+            });
+            return false
+        } 
+        return true
+    }
+
+    handleSubmit = e => {
+        e.preventDefault();
         
-        
-        };
+        const isValid = this.validate();
+        if (isValid) {
+            console.log(this.state, "zarejestrowano")
+            //clear the form
+            this.setState(
+                initialState
+            );
+
+        } else console.log("nie zarejestrowano")
+};
 
 
 
