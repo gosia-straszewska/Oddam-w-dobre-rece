@@ -26,7 +26,7 @@ export class Register extends Component {
     };
 
     validate = () => {
-        if(!this.state.mail.includes('@')){
+        if(!/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(this.state.mail)){
             this.setState({
                 mailError: 'Podany email jest nieprawidłowy',
             }); 
