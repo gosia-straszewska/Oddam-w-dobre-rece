@@ -3,17 +3,16 @@ import decoration from '../../assets/Decoration.svg';
 import facebook from '../../assets/Facebook.svg';
 import instagram from '../../assets/Instagram.svg';
 
+const initialState = {
+    name: '',
+    nameError: '',
+    mail: '',
+    mailError: '',
+    message: '',
+    messageError: ''
+}
 export class Contact extends Component {
-    state = {
-        name: '',
-        nameError: '',
-        mail: '',
-        mailError: '',
-        message: '',
-        messageError: ''
-        
-
-    };
+    state = initialState;
 
     handleChange = e => {
         const value = e.target.value;
@@ -23,43 +22,38 @@ export class Contact extends Component {
         });
     };
 
-     
-
-    handleSubmit = e => {
-        e.preventDefault();
-        console.log(`name = ${this.state.name}`);
-        console.log(this.state);
-
+     validate = () => {
         if(this.state.name === ''){
             this.setState({
                 nameError: 'Podane imię jest nieprawidłowe'
-            })
+            });
+            return false
         } if (!this.state.mail.includes('@')){
             this.setState ({
                 mailError: 'Podany email jest nieprawidłowy'
-            })
+            });
+            return false
         } if (this.state.message.length < 120 ){
             this.setState ({
                 messageError: 'Wiadomość musi mieć conajmniej 120 znaków!'
-            })
-        }
+            });
+            return false
+        } 
+        return true
+     }
 
-        // if(!this.state.mail.includes('@')){
-        //     this.setState({
-        //         mailError: 'Podany email jest nieprawidłowy',
-        //     })
-        // } if(this.state.password.length <= 5 ){
-        //     this.setState({
-        //         passwordError: 'Podane hasło jest za krótkie!',
-        //     })
-        // } if (this.state.password !== this.state.secondPassword){
-        //     this.setState({
-        //         secondPasswordError: 'Hasła muszą być takie same!',
-        //     })
-        // } else return console.log("zarejestrowano")
-        
-        
-        };
+    handleSubmit = e => {
+        e.preventDefault();
+
+        const isValid = this.validate();
+        if (isValid) {
+            console.log(this.state, "wysłano")
+            //clear the form
+            this.setState(
+                initialState
+            );
+        } else console.log("nie wysłano")
+    };
 
     render() {
         const {name, nameError, mail, mailError, message, messageError} = this.state;
