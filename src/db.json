@@ -56,7 +56,7 @@
 	],
 	"organizations": [{
 			"id": 1,
-			"name": "Lorem Ipsum 1",
+			"name": "Organizacja",
 			"goal": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
 			"things": "Egestas, sed, tempus"
 		},
@@ -93,7 +93,7 @@
 	],
 	"local": [{
 			"id": 1,
-			"name": "Lorem Ipsum 1",
+			"name": "Localna zbiórka",
 			"goal": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
 			"things": "Egestas, sed, tempus"
 		},
