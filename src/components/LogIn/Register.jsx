@@ -92,8 +92,8 @@ export class Register extends Component {
                                 </div>
                             </div>
                             <div className="log-in-btns">
-                                <div className="log-in-form-btn-register">
-                                    <LinkRouter to='/logowanie'><input type="" defalutvalue="Zaloguj"/></LinkRouter>
+                                <div className="log-in-form-btn-login">
+                                    <LinkRouter to='/logowanie'><input type="submit" value="Zaloguj się"/></LinkRouter>
                                 </div>
                                 <div className="log-in-form-btn-login">
                                     <input type="submit" value="Załóż konto"/>

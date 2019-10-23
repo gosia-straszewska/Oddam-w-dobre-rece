@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import decoration from '../../assets/Decoration.svg';
-// import ReactPaginate from 'react-paginate';
+import ReactPaginate from 'react-paginate';
 
 class FundationList extends Component {
     constructor(props) {
@@ -8,34 +8,52 @@ class FundationList extends Component {
         this.state = {
             items: [],
             isLoaded: false,
-
+            offset: 0,
+            perPage: 3,
+            currentPage: 0,
         }
     };
+    // limit - 3
+    // offset - limit * page - perPage * currentPage
 
-    componentDidMount() {
-
+    loadFundationsFromServer (){
         fetch("http://localhost:3000/fundations")
             .then(res => res.json())
             .then(json => {
                 this.setState({
                     isLoaded: true,
                     items: json,
+                    pageCount: Math.ceil(json.length / this.state.perPage)
                 })
             });
+    }
+    componentDidMount() {
+        this.loadFundationsFromServer();
     };
 
-    render() {
+    handlePageClick = items => {
+        let selected = items.selected;
+        console.log(items)
+        let offset = Math.ceil(selected * 3);
+    
+        this.setState({ 
+            offset,
+            currentPage: selected
+        });
+      };
 
+    render() {
+        // console.log(this.state.pageCount)
         var { isLoaded, items } = this.state;
 
         if (!isLoaded) {
             return <div>Wczytywanie...</div>
         } else {
-
+            console.log(items);
             return (
-
+                
                 <div>
-                    {items.map(item => (
+                    {items.slice(this.state.offset, this.state.offset +3).map(item => (
                         <li className="list-el" key={item.id}>
                             <div className="list-el-about">
                                 <p className="list-el-title">{item.name}</p>
@@ -46,7 +64,19 @@ class FundationList extends Component {
                             </div>
                         </li>
                     ))}
+                
+                <ReactPaginate
+                pageCount={this.state.pageCount}
+                marginPagesDisplayed={3}
+                pageRangeDisplayed={3}
+                onPageChange={this.handlePageClick}
+                containerClassName={'pagination'}
+                subContainerClassName={'pages pagination'}
+                activeClassName={'active'}
+                ></ReactPaginate>
                 </div>
+                
+              
 
             )
         }
